@@ -77,7 +77,7 @@ function source:get_completions(ctx, callback)
             ft_items[#ft_items + 1] = {
               word = snip.trigger,
               label = snip.trigger,
-              kind = "snippet",
+              kind = vim.lsp.protocol.CompletionItemKind.Snippet,
               data = {
                 priority = snip.effective_priority or 1000, -- Default priority is used for old luasnip versions
                 filetype = ft,
